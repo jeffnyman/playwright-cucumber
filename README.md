@@ -35,7 +35,7 @@ npm run dryrun
 To run the specs:
 
 ```shell
-test
+npm test
 ```
 
 ## ⚖ License
