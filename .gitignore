@@ -1,5 +1,7 @@
 # Project generated
 
+test-report.html
+
 node_modules/
 /test-results/
 /playwright-report/
