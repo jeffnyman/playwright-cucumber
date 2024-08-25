@@ -1,0 +1,27 @@
+module.exports = {
+  default: {
+    tags: process.env.npm_config_TAGS || "",
+    paths: ["specs/features/"],
+    require: ["specs/steps/**/*.ts", "support/hooks.ts"],
+    requireModule: ["ts-node/register"],
+    formatOptions: {
+      snippetInterface: "async-await",
+    },
+    format: [
+      "html:results/spec-report.html",
+      "json:results/spec-report.json",
+      "rerun:rerun/@failed.txt",
+    ],
+    parallel: 2,
+  },
+  rerun: {
+    require: ["specs/steps/**/*.ts", "support/hooks.ts"],
+    requireModule: ["ts-node/register"],
+    format: [
+      "html:results/spec-report.html",
+      "json:results/spec-report.json",
+      "rerun:rerun/@failed.txt",
+    ],
+    parallel: 2,
+  },
+};

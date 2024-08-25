@@ -1,0 +1,45 @@
+{
+  "name": "playwright-cuke",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Jeff Nyman <jeffnyman@gmail.com> (https://testerstories.com)",
+  "description": "A Pedagogical Example of Playwright and Cucumber",
+  "license": "MIT",
+  "scripts": {
+    "specs:dashboard:show": "npx open-cli results/dashboard/index.html",
+    "specs:dashboard:generate": "npx ts-node support/report.ts",
+    "specs:report": "npx open-cli results/spec-report.html",
+    "specs:rerun": "npx cucumber-js -p rerun rerun/@failed.txt",
+    "specs:dryrun": "npx cucumber-js --dry-run",
+    "specs": "cross-env ENV=prod npx cucumber-js --config=config/cucumber.js test",
+    "lint:fix": "npx eslint . --fix",
+    "lint": "npx eslint .",
+    "format:fix": "npx prettier . --write",
+    "format": "npx prettier . --check"
+  },
+  "keywords": [
+    "training",
+    "learning",
+    "automation",
+    "playwright",
+    "cucumber"
+  ],
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@eslint/js": "^9.9.0",
+    "@playwright/test": "^1.46.1",
+    "@types/eslint__js": "^8.42.3",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "multiple-cucumber-html-reporter": "^3.7.0",
+    "open-cli": "^8.0.0",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.2.0",
+    "winston": "^3.14.2"
+  }
+}
